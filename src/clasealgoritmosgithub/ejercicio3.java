@@ -15,13 +15,17 @@ import javax.swing.JOptionPane;
  * @author Jose Ayala
  */
 public class ejercicio3 extends javax.swing.JFrame {
-private ImageIcon imagen;
+
+    private ImageIcon imagen;
     private Icon icono;
+
     /**
      * Creates new form ejercicio3
      */
     public ejercicio3() {
         initComponents();
+         this.setLocationRelativeTo(null);
+        this.pintarImagen(hunk, "src\\clase26sepalgoritmos\\hunk.jpg");
     }
 
     /**
@@ -34,17 +38,11 @@ private ImageIcon imagen;
     private void initComponents() {
 
         hunk = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jTextField1.setText("Ficha técnica\t Tipo de motor\tMonocilíndrico/2 Válvulas /4 tiempos/ Refrigerado por aire Cilindrada\t163cc Sistema de alimentacion\tInyeccion electronica Xsens y certificacion EURO 4 Potencia\t15 hp @8500 rpm Torque\t14N m @6500 rpm Peso\t139,5 kg Rueda trasera\t130/70/17\" Rueda delantera\t100/80/17\" Altura del asiento\t790mm Altura al suelo\t170mm Suspension delantera\tHidraulica telescopica de 37mm Suspensión trasera\tMonoamortiguador ajustable en 7 posiciones Freno delantero\tHidráulico de disco de 276mm / ABS monocanal Freno trasero\tHidráulico de disco de 220mm Iluminación frontal\tLED Iluminación trasera\tLED Tablero\t100% digital + iluminacion invertida Direccionales\tLED + Luces estacionarias de fabrica");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
 
         jButton1.setText("Regresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -53,17 +51,25 @@ private ImageIcon imagen;
             }
         });
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Ficha técnica\t\nTipo de motor\tMonocilíndrico/2 Válvulas /4 tiempos/ Refrigerado por aire\nCilindrada\t163cc\nSistema de alimentacion\tInyeccion electronica Xsens y certificacion EURO 4\nPotencia\t15 hp @8500 rpm\nTorque\t14N m @6500 rpm\nPeso\t139,5 kg\nRueda trasera\t130/70/17\"\nRueda delantera\t100/80/17\"\nAltura del asiento\t790mm\nAltura al suelo\t170mm\nSuspension delantera\tHidraulica telescopica de 37mm\nSuspensión trasera\tMonoamortiguador ajustable en 7 posiciones\nFreno delantero\tHidráulico de disco de 276mm / ABS monocanal\nFreno trasero\tHidráulico de disco de 220mm\nIluminación frontal\tLED\nIluminación trasera\tLED\nTablero\t100% digital + iluminacion invertida\nDireccionales\tLED + Luces estacionarias de fabrica");
+        jScrollPane1.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addComponent(hunk, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton1)
+                            .addComponent(hunk, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -71,9 +77,9 @@ private ImageIcon imagen;
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(hunk, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
                 .addContainerGap(9, Short.MAX_VALUE))
         );
@@ -81,14 +87,10 @@ private ImageIcon imagen;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       ejercicio2 acceso = new ejercicio2();
-            acceso.setVisible(true);
-            this.dispose();
+        ejercicio2 acceso = new ejercicio2();
+        acceso.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -125,10 +127,24 @@ private ImageIcon imagen;
             }
         });
     }
+     private void pintarImagen(JLabel lbl, String ruta) {
+        this.imagen = new ImageIcon(ruta);
+        this.icono = new ImageIcon(
+                this.imagen.getImage().getScaledInstance(
+                        lbl.getWidth(),
+                        lbl.getHeight(),
+                        Image.SCALE_DEFAULT
+                )
+        );
+        lbl.setIcon(icono);
+        this.repaint();
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel hunk;
     private javax.swing.JButton jButton1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

@@ -24,12 +24,17 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jTextField1" pref="0" max="32767" attributes="0"/>
-                      <Component id="hunk" pref="343" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="343" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="hunk" min="-2" pref="343" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace pref="47" max="32767" attributes="0"/>
@@ -41,9 +46,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="hunk" min="-2" pref="117" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-              <Component id="jTextField1" min="-2" pref="70" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="106" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="9" max="32767" attributes="0"/>
           </Group>
@@ -53,14 +58,6 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="hunk">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ficha t&#xe9;cnica&#x9; Tipo de motor&#x9;Monocil&#xed;ndrico/2 V&#xe1;lvulas /4 tiempos/ Refrigerado por aire Cilindrada&#x9;163cc Sistema de alimentacion&#x9;Inyeccion electronica Xsens y certificacion EURO 4 Potencia&#x9;15 hp @8500 rpm Torque&#x9;14N m @6500 rpm Peso&#x9;139,5 kg Rueda trasera&#x9;130/70/17&quot; Rueda delantera&#x9;100/80/17&quot; Altura del asiento&#x9;790mm Altura al suelo&#x9;170mm Suspension delantera&#x9;Hidraulica telescopica de 37mm Suspensi&#xf3;n trasera&#x9;Monoamortiguador ajustable en 7 posiciones Freno delantero&#x9;Hidr&#xe1;ulico de disco de 276mm / ABS monocanal Freno trasero&#x9;Hidr&#xe1;ulico de disco de 220mm Iluminaci&#xf3;n frontal&#x9;LED Iluminaci&#xf3;n trasera&#x9;LED Tablero&#x9;100% digital + iluminacion invertida Direccionales&#x9;LED + Luces estacionarias de fabrica"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Regresar"/>
@@ -69,5 +66,21 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea1">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="Ficha t&#xe9;cnica&#x9;&#xa;Tipo de motor&#x9;Monocil&#xed;ndrico/2 V&#xe1;lvulas /4 tiempos/ Refrigerado por aire&#xa;Cilindrada&#x9;163cc&#xa;Sistema de alimentacion&#x9;Inyeccion electronica Xsens y certificacion EURO 4&#xa;Potencia&#x9;15 hp @8500 rpm&#xa;Torque&#x9;14N m @6500 rpm&#xa;Peso&#x9;139,5 kg&#xa;Rueda trasera&#x9;130/70/17&quot;&#xa;Rueda delantera&#x9;100/80/17&quot;&#xa;Altura del asiento&#x9;790mm&#xa;Altura al suelo&#x9;170mm&#xa;Suspension delantera&#x9;Hidraulica telescopica de 37mm&#xa;Suspensi&#xf3;n trasera&#x9;Monoamortiguador ajustable en 7 posiciones&#xa;Freno delantero&#x9;Hidr&#xe1;ulico de disco de 276mm / ABS monocanal&#xa;Freno trasero&#x9;Hidr&#xe1;ulico de disco de 220mm&#xa;Iluminaci&#xf3;n frontal&#x9;LED&#xa;Iluminaci&#xf3;n trasera&#x9;LED&#xa;Tablero&#x9;100% digital + iluminacion invertida&#xa;Direccionales&#x9;LED + Luces estacionarias de fabrica"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

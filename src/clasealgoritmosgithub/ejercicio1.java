@@ -131,7 +131,7 @@ public class ejercicio1 extends javax.swing.JFrame {
         }
         if (this.contraseña.getText().intern() == " ") {
             JOptionPane.showMessageDialog(null, "ingrese valor");
-            
+
         } else if (this.contraseña.getText().intern() != "j123") {
             JOptionPane.showMessageDialog(null, "Ingrese contraseña correcta");
         }

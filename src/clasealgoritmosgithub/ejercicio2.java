@@ -15,17 +15,19 @@ import javax.swing.JOptionPane;
  * @author Jose Ayala
  */
 public class ejercicio2 extends javax.swing.JFrame {
-private ImageIcon imagen;
+
+    private ImageIcon imagen;
     private Icon icono;
+
     /**
      * Creates new form ejercicio2
      */
     public ejercicio2() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.pintarImagen(ima1, "src\\clasealgoritmosgithub\\hunk.png");
-        this.pintarImagen(ima2, "src\\clasealgoritmosgithub\\pulsar.jpg");
-        this.pintarImagen(ima3, "src\\clasealgoritmosgithub\\apache.jpg");
+        this.pintarImagen(ima1, "src\\clasealgoritmosgithub\\hunk.jpg");
+        this.pintarImagen(ima2, "src\\clasealgoritmosgithub\\pulsar.png");
+        this.pintarImagen(ima3, "src\\clasealgoritmosgithub\\apache.png");
     }
 
     /**
@@ -188,8 +190,9 @@ private ImageIcon imagen;
             }
         });
     }
+
     private void pintarImagen(JLabel lbl, String ruta) {
-this.imagen = new ImageIcon(ruta);
+        this.imagen = new ImageIcon(ruta);
         this.icono = new ImageIcon(
                 this.imagen.getImage().getScaledInstance(
                         lbl.getWidth(),
@@ -213,5 +216,3 @@ this.imagen = new ImageIcon(ruta);
     private javax.swing.JButton mas3;
     // End of variables declaration//GEN-END:variables
 }
-
-
