@@ -79,8 +79,6 @@ public class ejercicio1 extends javax.swing.JFrame {
             }
         });
 
-        contraseña.setText("jPasswordField1");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -126,12 +124,23 @@ public class ejercicio1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ingresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresoActionPerformed
-        if (this.usuario.getText().intern()=="") {
-            JOptionPane.showInputDialog("ingrese valor");
-            
+        if (this.usuario.getText().intern() == " ") {
+            JOptionPane.showInputDialog("Ingrese valor");
+        } else if (this.usuario.getText().intern() != "jose") {
+            JOptionPane.showMessageDialog(null, "Ingrese valor correcto");
         }
-        else{
-        JOptionPane.showMessageDialog(null,"paso");
+        if (this.contraseña.getText().intern() == " ") {
+            JOptionPane.showMessageDialog(null, "ingrese valor");
+            
+        } else if (this.contraseña.getText().intern() != "j123") {
+            JOptionPane.showMessageDialog(null, "Ingrese contraseña correcta");
+        }
+        if (this.check.isSelected() == true) {
+            ejercicio2 acceso = new ejercicio2();
+            acceso.setVisible(true);
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(null, "Debe aceptar terminos y condiciones");
         }
     }//GEN-LAST:event_ingresoActionPerformed
 
